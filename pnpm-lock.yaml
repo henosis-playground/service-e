@@ -19,7 +19,7 @@ importers:
 packages:
 
   '@henosis/platform-cloudflare@https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50#path:packages/platform-cloudflare':
-    resolution: {gitHosted: true, integrity: sha512-iTR3WgvNyGETr1QvPf9qDGr1eYr1qzYSVbhjCO8kCzRh2W3ZgLm11A07v31O2e6pndDJGwKSSdVW3L+OZIgW3w==, tarball: https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50}
+    resolution: {gitHosted: true, path: packages/platform-cloudflare, tarball: https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50}
     version: 0.0.0
 
   typescript@5.9.3:
