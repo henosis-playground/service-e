@@ -1,0 +1,16 @@
+{
+  "name": "@henosis/service-e",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@henosis/platform-cloudflare": "github:henosis-playground/platform#236705a&path:packages/platform-cloudflare"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@11.3.0"
+}

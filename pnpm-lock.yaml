@@ -1,0 +1,34 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@henosis/platform-cloudflare':
+        specifier: github:henosis-playground/platform#236705a&path:packages/platform-cloudflare
+        version: https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50#path:packages/platform-cloudflare
+    devDependencies:
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
+packages:
+
+  '@henosis/platform-cloudflare@https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50#path:packages/platform-cloudflare':
+    resolution: {gitHosted: true, integrity: sha512-iTR3WgvNyGETr1QvPf9qDGr1eYr1qzYSVbhjCO8kCzRh2W3ZgLm11A07v31O2e6pndDJGwKSSdVW3L+OZIgW3w==, tarball: https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50}
+    version: 0.0.0
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+snapshots:
+
+  '@henosis/platform-cloudflare@https://codeload.github.com/henosis-playground/platform/tar.gz/236705a81f127cd1b55538e7e821327ca3527b50#path:packages/platform-cloudflare': {}
+
+  typescript@5.9.3: {}
