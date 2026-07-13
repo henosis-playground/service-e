@@ -1,24 +1,9 @@
-type OutputRef<T> = Readonly<{
-  component: string;
-  output: string;
-  readonly __type?: T;
-}>;
+import { defineWorker, input } from "@henosis/platform-cloudflare";
 
-const output = <T>(component: string, name: string): OutputRef<T> => ({
-  component,
-  output: name,
-});
-
-const definition = {
-  kind: "cloudflare.worker",
-  name: "service-e",
-  project: ".",
+export default defineWorker({
   inputs: {
-    SUPABASE_URL: output<string>("service-d", "restUrl"),
-    SUPABASE_SCHEMA: output<string>("service-d", "schema"),
-    SUPABASE_ANON_KEY: output<string>("service-d", "anonKeyRef"),
+    SUPABASE_URL: input.url("service-d", "restUrl"),
+    SUPABASE_SCHEMA: input.string("service-d", "schema"),
+    SUPABASE_ANON_KEY: input.secret("service-d", "anonKeyRef"),
   },
-} as const;
-
-console.log(JSON.stringify(definition));
-export default definition;
+});
