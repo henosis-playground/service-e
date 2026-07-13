@@ -7,10 +7,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@henosis/platform-cloudflare": "github:henosis-playground/connector-cloudflare#55ffdd9e55d83900b87f8418c5133fbbe0af7aac&path:packages/platform-cloudflare"
+    "@henosis/platform-cloudflare": "github:henosis-playground/platform#236705a&path:packages/platform-cloudflare"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "5.9.3"
   },
   "packageManager": "pnpm@11.3.0"
 }

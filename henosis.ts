@@ -1,9 +1,25 @@
-import { defineWorker, input } from "@henosis/platform-cloudflare";
+import {
+  declareOutputs,
+  defineWorker,
+  h,
+  secret,
+  workerOutputs,
+} from "@henosis/platform-cloudflare";
+
+const serviceD = declareOutputs(
+  "service-d",
+  h.object({
+    restUrl: h.url(),
+    schema: h.string(),
+    anonKeyRef: h.string(),
+  }),
+);
 
 export default defineWorker({
-  inputs: {
-    SUPABASE_URL: input.url("service-d", "restUrl"),
-    SUPABASE_SCHEMA: input.string("service-d", "schema"),
-    SUPABASE_ANON_KEY: input.secret("service-d", "anonKeyRef"),
+  outputs: workerOutputs,
+  vars: {
+    SUPABASE_URL: serviceD.restUrl,
+    SUPABASE_SCHEMA: serviceD.schema,
+    SUPABASE_ANON_KEY: secret(serviceD.anonKeyRef),
   },
 });
