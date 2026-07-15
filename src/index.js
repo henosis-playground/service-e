@@ -6,6 +6,7 @@ export default {
         {
           ok: true,
           bindings: {
+            backendUrl: env.BACKEND_URL,
             supabaseUrl: env.SUPABASE_URL,
             supabaseSchema: env.SUPABASE_SCHEMA,
             supabaseAnonKey: Boolean(env.SUPABASE_ANON_KEY),
@@ -16,7 +17,7 @@ export default {
     }
     if (url.pathname !== "/items") {
       return Response.json(
-        { service: "service-e", demo: "shared-preview-cycle-1", endpoints: ["/health", "/items"] },
+        { service: "service-e", demo: "shared-preview-cycle-2", endpoints: ["/health", "/items"] },
         { headers: { "access-control-allow-origin": "*" } },
       );
     }
