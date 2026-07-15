@@ -1,0 +1,4 @@
+# Prototype dependency seam: consume the sibling platform checkout on d26-sdk.
+# The override rewrites platform packages' internal workspace:* reference to @henosis/core.
+overrides:
+  "@henosis/core": "file:../platform/packages/core"

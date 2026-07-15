@@ -3,14 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": { ".": "./henosis/src/service-e.ts" },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run henosis/test/service-e.test.ts"
   },
   "dependencies": {
-    "@henosis/platform-cloudflare": "github:henosis-playground/platform#236705a&path:packages/platform-cloudflare"
+    "@henosis/core": "file:../platform/packages/core",
+    "@henosis/platform-cloudflare": "file:../platform/packages/platform-cloudflare",
+    "@henosis/service-d": "file:../service-d"
   },
   "devDependencies": {
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
   },
   "packageManager": "pnpm@11.3.0"
 }
