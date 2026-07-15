@@ -16,7 +16,7 @@ export default {
     }
     if (url.pathname !== "/items") {
       return Response.json(
-        { service: "service-e", endpoints: ["/health", "/items"] },
+        { service: "service-e", demo: "shared-preview-cycle-1", endpoints: ["/health", "/items"] },
         { headers: { "access-control-allow-origin": "*" } },
       );
     }
