@@ -17,6 +17,9 @@ importers:
       '@henosis/platform-cloudflare':
         specifier: file:../platform/packages/platform-cloudflare
         version: file:../platform/packages/platform-cloudflare
+      '@henosis/service-a':
+        specifier: file:../service-a
+        version: file:../service-a
       '@henosis/service-d':
         specifier: file:../service-d
         version: file:../service-d
@@ -45,8 +48,15 @@ packages:
   '@henosis/platform-cloudflare@file:../platform/packages/platform-cloudflare':
     resolution: {directory: ../platform/packages/platform-cloudflare, type: directory}
 
+  '@henosis/platform-k8s@file:../platform/packages/platform-k8s':
+    resolution: {directory: ../platform/packages/platform-k8s, type: directory}
+
   '@henosis/platform-supabase@file:../platform/packages/platform-supabase':
     resolution: {directory: ../platform/packages/platform-supabase, type: directory}
+
+  '@henosis/service-a@file:../service-a':
+    resolution: {directory: ../service-a, type: directory}
+    engines: {node: '>=22'}
 
   '@henosis/service-d@file:../service-d':
     resolution: {directory: ../service-d, type: directory}
@@ -498,9 +508,18 @@ snapshots:
     dependencies:
       '@henosis/core': file:../platform/packages/core
 
+  '@henosis/platform-k8s@file:../platform/packages/platform-k8s':
+    dependencies:
+      '@henosis/core': file:../platform/packages/core
+
   '@henosis/platform-supabase@file:../platform/packages/platform-supabase':
     dependencies:
       '@henosis/core': file:../platform/packages/core
+
+  '@henosis/service-a@file:../service-a':
+    dependencies:
+      '@henosis/core': file:../platform/packages/core
+      '@henosis/platform-k8s': file:../platform/packages/platform-k8s
 
   '@henosis/service-d@file:../service-d':
     dependencies:

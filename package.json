@@ -11,6 +11,7 @@
   "dependencies": {
     "@henosis/core": "file:../platform/packages/core",
     "@henosis/platform-cloudflare": "file:../platform/packages/platform-cloudflare",
+    "@henosis/service-a": "file:../service-a",
     "@henosis/service-d": "file:../service-d"
   },
   "devDependencies": {
